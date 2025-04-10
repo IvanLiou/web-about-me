@@ -147,6 +147,14 @@ section {
 </style>
 </head>
 <body>
+  <script>
+    // Prevent browser from restoring scroll position
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // Force top scroll before anything renders
+    window.scrollTo(0, 0);
+  </script>
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 <script>
   function toggleMenu() {
