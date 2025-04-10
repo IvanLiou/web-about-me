@@ -158,8 +158,15 @@ section {
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 <script>
   function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('open');
+    const isChinese = document.getElementById("zh").style.display === "block";
+    const navWrapper = isChinese
+      ? document.getElementById("nav-zh")
+      : document.getElementById("nav-en");
+
+    const nav = navWrapper.querySelector("nav");
+    if (nav) {
+      nav.classList.toggle("open");
+    }
   }
 </script>
 
