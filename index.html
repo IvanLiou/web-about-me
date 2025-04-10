@@ -174,6 +174,17 @@ section {
     <a href="#contact">Contact Info</a>
   </nav>
 </div>
+<!-- 中文版固定導覽列 -->
+<div id="nav-zh" style="position: fixed; top: 1rem; right: 1rem; background: #ffffff; padding: 0.4rem 1rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: none; gap: 0.8rem; z-index: 1000;">
+  <nav style="display: flex; gap: 1rem;">
+    <a href="#intro-zh">關於我</a>
+    <a href="#education-zh">學歷</a>
+    <a href="#activities-zh">課外活動</a>
+    <a href="#volunteer-zh">志工經驗</a>
+    <a href="#honor-zh">獲獎</a>
+    <a href="#contact-zh">聯絡方式</a>
+  </nav>
+</div>
 
   <h1>Chen-Shi Liou</h1>
   <p class="title">Future Engineer · Cultural Ambassador · Problem Solver · Hands-On Builder · Community Volunteer</p>
@@ -401,16 +412,19 @@ section {
 <script>
   const zhBtn = document.querySelectorAll(".lang-switch button")[1];
   const enBtn = document.querySelectorAll(".lang-switch button")[0];
+
   zhBtn.onclick = () => {
     document.getElementById("zh").style.display = "block";
     document.getElementById("en").style.display = "none";
+    document.getElementById("nav-zh").style.display = "flex"; // Show zh nav
   };
+
   enBtn.onclick = () => {
     document.getElementById("zh").style.display = "none";
     document.getElementById("en").style.display = "block";
+    document.getElementById("nav-zh").style.display = "none"; // Hide zh nav
   };
 </script>
-
 
   </div>
 </body>
