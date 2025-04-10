@@ -407,24 +407,23 @@ section {
 </div>
 
 <script>
-  const zhBtn = document.querySelectorAll(".lang-switch button")[1];
-  const enBtn = document.querySelectorAll(".lang-switch button")[0];
-
-  zhBtn.onclick = () => {
-    document.getElementById("zh").style.display = "block";
-    document.getElementById("en").style.display = "none";
-    document.getElementById("nav-zh").style.display = "flex";  // Show zh nav
-    document.getElementById("nav-en").style.display = "none";  // Hide en nav
-  };
-
-  enBtn.onclick = () => {
+  function showEnglish() {
     document.getElementById("zh").style.display = "none";
     document.getElementById("en").style.display = "block";
-    document.getElementById("nav-zh").style.display = "none";  // Hide zh nav
-    document.getElementById("nav-en").style.display = "flex";  // Show en nav
-  };
-</script>
+    document.getElementById("nav-zh").style.display = "none";
+    document.getElementById("nav-en").style.display = "flex";
+  }
 
+  function showChinese() {
+    document.getElementById("zh").style.display = "block";
+    document.getElementById("en").style.display = "none";
+    document.getElementById("nav-zh").style.display = "flex";
+    document.getElementById("nav-en").style.display = "none";
+  }
+
+  document.querySelector("button[onclick='showEnglish()']").addEventListener('click', showEnglish);
+  document.querySelector("button[onclick='showChinese()']").addEventListener('click', showChinese);
+</script>
 
 </body>
 </html>
