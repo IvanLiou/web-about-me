@@ -116,6 +116,7 @@ section {
     border-radius: 8px;
     padding: 0.2rem 0.6rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
   }
   nav {
     transition: max-height 0.3s ease-out;
@@ -155,9 +156,9 @@ section {
     // Force top scroll before anything renders
     window.scrollTo(0, 0);
   </script>
-<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="hamburger" onclick="toggleMenu(this)">☰</div>
 <script>
-  function toggleMenu() {
+  function toggleMenu(icon) {
     const isChinese = document.getElementById("zh").style.display === "block";
     const navWrapper = isChinese
       ? document.getElementById("nav-zh")
@@ -167,6 +168,9 @@ section {
     if (nav) {
       nav.classList.toggle("open");
     }
+
+    // Toggle class on icon to animate
+    icon.classList.toggle("open");
   }
 </script>
 
