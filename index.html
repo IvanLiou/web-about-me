@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Chen-Shi Liou Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     html { scroll-behavior: smooth; }
@@ -183,8 +184,10 @@ section {
   </nav>
 </div>
 
-  <h1>Chen-Shi Liou</h1>
-  <p class="title">Future Engineer · Cultural Ambassador · Problem Solver · Hands-On Builder · Community Volunteer</p>
+<h1 data-aos="fade-up" data-aos-duration="1000">Chen-Shi Liou</h1>
+<p class="title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+  Future Engineer · Cultural Ambassador · Problem Solver · Hands-On Builder · Community Volunteer
+</p>
 
   
 <div class="container" id="en">
@@ -424,6 +427,9 @@ section {
   document.querySelector("button[onclick='showEnglish()']").addEventListener('click', showEnglish);
   document.querySelector("button[onclick='showChinese()']").addEventListener('click', showChinese);
 </script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
