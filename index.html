@@ -156,9 +156,9 @@ section {
     // Force top scroll before anything renders
     window.scrollTo(0, 0);
   </script>
-<div class="hamburger" onclick="toggleMenu(this)">☰</div>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 <script>
-  function toggleMenu(icon) {
+  function toggleMenu() {
     const isChinese = document.getElementById("zh").style.display === "block";
     const navWrapper = isChinese
       ? document.getElementById("nav-zh")
@@ -167,13 +167,6 @@ section {
     const nav = navWrapper.querySelector("nav");
     if (nav) {
       nav.classList.toggle("open");
-    }
-
-    icon.classList.toggle("open");
-
-    // 🔁 Swap icon only if viewport is mobile size
-    if (window.innerWidth <= 768) {
-      icon.textContent = icon.classList.contains("open") ? "✖" : "☰";
     }
   }
 </script>
