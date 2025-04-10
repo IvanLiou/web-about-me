@@ -169,8 +169,12 @@ section {
       nav.classList.toggle("open");
     }
 
-    // Toggle class on icon to animate
     icon.classList.toggle("open");
+
+    // 🔁 Swap icon only if viewport is mobile size
+    if (window.innerWidth <= 768) {
+      icon.textContent = icon.classList.contains("open") ? "✖" : "☰";
+    }
   }
 </script>
 
@@ -455,6 +459,15 @@ section {
 <script>
   window.addEventListener('load', () => {
     window.scrollTo(0, 0);
+  });
+</script>
+<script>
+  window.addEventListener("resize", () => {
+    const icon = document.querySelector(".hamburger");
+    if (window.innerWidth > 768 && icon.classList.contains("open")) {
+      icon.classList.remove("open");
+      icon.textContent = "☰";
+    }
   });
 </script>
 </body>
