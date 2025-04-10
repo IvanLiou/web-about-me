@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chen-Shi Liou Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html { scroll-behavior: smooth; }
+    
+section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #ffffff, #f2f6f9);
+  border-radius: 1rem;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(to bottom, #ffffff, #f2f6f9);
+      border-radius: 1rem;
+    }
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      text-align: center;
+      color: #0a3d62;
+      margin: 4rem 0 0.5rem;
+    }
+    p.title {
+      text-align: center;
+      font-size: 1rem;
+      margin: 0 0 2rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      color: #003366;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    nav {
+      background: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      position: fixed;
+      z-index: 999;
+      top: 1rem;
+      right: 1rem;
+    }
+    nav a {
+      margin-left: 0.8rem;
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #444;
+      font-weight: 600;
+    }
+    .lang-switch {
+      left: 1rem;
+      position: fixed;
+      z-index: 999;
+      top: 1rem;
+      right: 6rem;
+    }
+    .lang-switch button {
+      background: #e0f4ff;
+      color: #007acc;
+      border: none;
+      border-radius: 20px;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+    details {
+      background: #f9fbff;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #e6f2fb;
+      margin-top: 3rem;
+      border-radius: 1rem;
+    }
+  </style>
+
+<style>
+  .hamburger {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+  nav {
+    transition: max-height 0.3s ease-out;
+  }
+  @media (max-width: 768px) {
+    nav {
+      position: fixed;
+      top: 3rem;
+      right: 1rem;
+      background: #ffffff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-height: 0;
+      overflow: hidden;
+    }
+    nav.open {
+      max-height: 300px;
+    }
+    nav a {
+      margin: 0.5rem 1rem;
+      display: block;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('open');
+  }
+</script>
+
+
+  <div class="lang-switch">
+    <button>EN</button>
+    <button>中文</button>
+  </div>
+
+  <nav>
+    <a href="#intro">About</a>
+    <a href="#education">Education</a>
+    <a href="#activities">Activities</a>
+    <a href="#volunteer">Volunteer</a>
+    <a href="#honor">Honor</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <h1>Chen-Shi Liou</h1>
+  <p class="title">Future Engineer · Cultural Ambassador · Problem Solver · Hands-On Builder · Community Volunteer</p>
+
+  
+<div class="container" id="en">
+
+
+    <section id="intro">
+      <h2>About Me</h2>
+      <p>I'm currently a senior at Novi High School, aspiring to pursue an engineering career at the University of Michigan. I am passionate, resilient, and ambitious, and I enjoy solving problems through critical thinking. With a strong desire for technology and scientific inquiry, I continuously seek out new challenges both inside and outside of the classroom.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Kang Ming Junior High School</strong> – Graduated in Taiwan</li>
+        <li><strong>Novi High School</strong> – Senior student in Michigan</li>
+        <li><strong>SAT Score:</strong> 1490</li>
+        <li><strong>GPA:</strong> 3.96</li>
+      </ul>
+      <details>
+        <summary>Advanced Placement Courses</summary>
+        <ul>
+          <li>Biology</li>
+          <li>Physics C: Mechanics</li>
+          <li>Physics C: Electricity and Magnetism</li>
+          <li>Computer Science</li>
+        </ul>
+      </details>
+      <details>
+        <summary>High School Entrance Exam (Taiwan)</summary>
+        <p>Perfect score in the Comprehensive Assessment Program for Junior High School Students in Taiwan.</p>
+      </details>
+    </section>
+
+    
+
+    
+
+
+
+<section id="activities">
+<h2>Activities</h2>
+<details open>
+    <summary>FASCA Youth Ambassador</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1;">
+        <p>Volunteer from 2023–present. Assisted in cultural events, team organization, and outreach programs across Michigan.</p>
+      </div>
+      <div style="flex: 1;">
+        <img src="images/FASCA.jpg" alt="FASCA event" style="width:100%; border-radius:8px;">
+      </div>
+    </div>
+  </details>
+<details>
+    <summary>International Student Association Ambassador</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <img src="images/ISA.jpg" alt="ISA event" style="width:100%; border-radius:8px;">
+      <div style="flex: 1;">
+        <div style="width:100%; height:200px; background:#ddd; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#666;">
+          Insert ISA photo here — replace this <div> with: <img src="images/isa.jpg" alt="ISA event" style="width:100%; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+  </details>
+<details>
+    <summary>Robotics Club – Controls group member</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <img src="images/Robotics.jpg" alt="Robotics event" style="width:100%; border-radius:8px;">
+      <div style="flex: 1;">
+        <div style="width:100%; height:200px; background:#ddd; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#666;">
+          Insert Robotics photo here — replace this <div> with: <img src="images/robotics.jpg" alt="Robotics event" style="width:100%; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+  </details>
+<details>
+    <summary>Others</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1;">
+        <p>Active member in Math Club, Japanese Language Club, Applied Math and Computing Club, Badminton Club.</p>
+      </div>
+</div>
+</details>
+</section>
+<section id="volunteer">
+      <h2>Volunteer Experiences</h2>
+      <ul>
+        <li>UofM Taste of Taiwan (culture booth & games)</li>
+        <li>MSU Global Festival (culture presentation)</li>
+        <li>TECO-Chicago Lunar New Year and Double Ten National Day celebration</li>
+        <li>Novi High Blanket making and donation for homeless</li>
+        <li>Elementary Science Night</li>
+        <li>Church Food packing and delivery for community</li>
+        <li>Michigan Engineering Zone mentor for middle schooler</li>
+        <li>FIRST event volunteer</li>
+        <li>Camp Casey fundraising event volunteer</li>
+        <li>Others...</li>
+      </ul>
+    </section>
+
+    <section id="honor">
+      <h2>Honor and Certification</h2>
+      <ul>
+        <li>President’s Volunteer Service Award – Silver</li>
+        <li>American Red Cross CPR Certification</li>
+      </ul>
+    </section>
+
+    <footer id="contact">
+      <p>Contact: liou.s1700@gmail.com | Novi, Michigan</p>
+    </footer>
+</div>
+
+<!-- 中文版本 -->
+<div class="container" id="zh" style="display:none;">
+  <section id="intro-zh">
+    <h2>關於我</h2>
+    <p>我目前就讀於密西根州的 Novi 高中，即將畢業，目標是申請密西根大學的工程學院。我對科技與科學探索充滿熱情，喜歡透過邏輯思維與批判性思考解決問題。熱衷於挑戰，並在課內外不斷追求新知。</p>
+  </section>
+
+  <section id="education-zh">
+    <h2>學歷</h2>
+    <ul>
+      <li><strong>港明國中</strong> – 畢業於台灣</li>
+      <li><strong>Novi 高中</strong> – 美國高三學生</li>
+      <li><strong>SAT 分數：</strong>1490</li>
+      <li><strong>GPA：</strong>3.96</li>
+    </ul>
+    <details>
+      <summary>AP 課程</summary>
+      <ul>
+        <li>生物</li>
+        <li>物理C 力學</li>
+        <li>物理C 電磁學</li>
+        <li>計算機科學</li>
+      </ul>
+    </details>
+    <details>
+      <summary>台灣國中會考</summary>
+      <p>在台灣國中教育會考取得滿分佳績。</p>
+    </details>
+  </section>
+
+  
+
+  
+<section id="activities-zh">
+  <h2>課外活動</h2>
+
+  <details open>
+    <summary>FASCA 青年大使</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1;">
+        <p>自 2023 年起擔任志工，參與文化活動籌劃、團隊組織與密西根地區的社區推廣。</p>
+      </div>
+      <div style="flex: 1;">
+        <div style="width:100%; height:200px; background:#ddd; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#666;">
+          請在此插入 FASCA 活動圖片，例如：<img src="images/fasca.jpg" alt="FASCA 活動" style="width:100%; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>國際學生會大使</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1;">
+        <p>協助舉辦校園與社區文化活動，協助新生適應環境，並與幹部協作安排定期會議與合作交流。</p>
+      </div>
+      <div style="flex: 1;">
+        <div style="width:100%; height:200px; background:#ddd; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#666;">
+          請在此插入 ISA 活動圖片，例如：<img src="images/isa.jpg" alt="ISA 活動" style="width:100%; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>機器人社團 – 控制組成員</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1;">
+        <p>負責機器人控制系統開發，賽季期間參與媒體宣傳與團隊紀錄，並於非賽季時參與社區服務活動。</p>
+      </div>
+      <div style="flex: 1;">
+        <div style="width:100%; height:200px; background:#ddd; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#666;">
+          請在此插入 Robotics 活動圖片，例如：<img src="images/robotics.jpg" alt="機器人活動" style="width:100%; border-radius:8px;">
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>其他</summary>
+    <div style="display: flex; gap: 1rem; align-items: flex-start;">
+      <div style="flex: 1;">
+        <p>積極參與數學社、日語社、AMC 應用數學與計算社、羽球社等多項校內社團活動。</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section id="volunteer-zh">
+    <h2>志工經驗</h2>
+    <ul>
+      <li>密大臺灣文化攤位</li>
+      <li>MSU 國際文化節</li>
+      <li>TECO 芝加哥農曆新年與雙十節活動</li>
+      <li>Novi 高中手工毛毯捐贈活動</li>
+      <li>國小科學之夜</li>
+      <li>教會社區糧食打包與配送</li>
+      <li>MEZ 工程輔導員</li>
+      <li>FIRST 機器人賽志工</li>
+      <li>Camp Casey 募款活動</li>
+      <li>其他...</li>
+    </ul>
+  </section>
+
+  <section id="honor-zh">
+    <h2>獲獎與證書</h2>
+    <ul>
+      <li>總統志工服務獎 – 銀獎</li>
+      <li>美國紅十字 CPR 證書</li>
+    </ul>
+  </section>
+
+  <footer id="contact-zh">
+    <p>聯絡信箱：liou.s1700@gmail.com ｜ Novi, Michigan</p>
+  </footer>
+</div>
+
+<script>
+  const zhBtn = document.querySelectorAll(".lang-switch button")[1];
+  const enBtn = document.querySelectorAll(".lang-switch button")[0];
+  zhBtn.onclick = () => {
+    document.getElementById("zh").style.display = "block";
+    document.getElementById("en").style.display = "none";
+  };
+  enBtn.onclick = () => {
+    document.getElementById("zh").style.display = "none";
+    document.getElementById("en").style.display = "block";
+  };
+</script>
+
+
+  </div>
+</body>
+</html>
